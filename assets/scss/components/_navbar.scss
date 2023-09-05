@@ -1,13 +1,12 @@
-.navbar{
-    &__serach{
+.navbar {
+    &__serach {
         display: flex;
-        width: 207px;
         height: 40px;
 
-        
+
         @include media-breakpoint-up(lg) {
             width: 355px;
             height: 53px;
-          }
+        }
     }
 }

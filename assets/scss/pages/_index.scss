@@ -1,3 +1,250 @@
-.index-title {
-  font-size: 100px;
+.section__title {
+  font-size: 24px;
+
+  &+p {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 64px;
+
+    &+p {
+      font-size: 32px;
+    }
+  }
+}
+
+.hero {
+  &__inner {
+    position: relative;
+    height: 350px;
+    background-image: url(/assets/images/event/13.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__imgOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 40px 24px;
+
+    .hero__title {
+      font-size: 32px;
+    }
+
+    .hero__text {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__imgOverlay {
+      .hero__title {
+        font-size: 60px;
+      }
+
+      .hero__text {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.cate {
+  &__box {
+    padding: 20px 36px;
+    height: 100%;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__text {
+    margin-top: 0.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__img {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__text {
+      font-size: 24px;
+    }
+
+    &__action {
+      font-size: 36px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &__box {
+      padding: 35px 58px;
+    }
+
+    &__action {
+      font-size: 48px;
+    }
+  }
+}
+
+.event {
+  &__card {
+    height: 100%;
+
+    .card-img-top {
+      aspect-ratio: 1.67;
+
+    }
+
+    .card-title {
+      font-size: 32px;
+    }
+
+    .card-subtitle {
+      font-size: 18px;
+    }
+
+    .card-text {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__type {
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .card-subtitle {
+      font-size: 24px;
+    }
+  }
+}
+
+.online {
+  &__img {
+    width: 100%;
+    height: 158px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__tag {
+    padding: 4px 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background: $primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__action {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__img {
+      height: 317px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__tag {
+      padding: 4px 24px;
+    }
+
+    &__action {
+      font-size: 20px;
+    }
+  }
+}
+
+.loop {
+  &__text {
+    white-space: nowrap;
+    animation: loop-text 10s infinite linear;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__text {
+      font-size: 32px;
+    }
+  }
+}
+
+@keyframes loop-text {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.albums {
+  &__tag {
+    transform: translate(-50%, -50%) rotate(4deg);
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 291px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  .-rotate-2 {
+    transform: rotate(-2deg);
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__img {
+      height: 274px;
+    }
+  }
+}
+
+.slogan {
+  &__text {
+    font-size: 18px;
+  }
+
+  &__from {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__text {
+      font-size: 32px;
+    }
+
+    &__from {
+      font-size: 18px;
+    }
+  }
 }
